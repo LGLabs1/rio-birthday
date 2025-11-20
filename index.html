@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Happy Birthday!</title>
+  <!-- Windsurf CSS CDN -->
+  <link href="https://unpkg.com/windsurfcss@latest/dist/windsurf.min.css" rel="stylesheet" />
+  <style>
+    body {
+      min-height: 100vh;
+      margin: 0;
+      /* Gradient background */
+      background: linear-gradient(120deg, #f9c5d1 0%, #fff3ca 50%, #b4e9fc 100%);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .confetti {
+      pointer-events: none;
+      position: fixed;
+      inset: 0;
+      z-index: 1;
+    }
+    .confetti-dot {
+      position: absolute;
+      border-radius: 9999px;
+      opacity: 0.7;
+      width: 12px;
+      height: 12px;
+      z-index: 1;
+    }
+    .card {
+      position: relative;
+      z-index: 2;
+      background: rgba(255,255,255,0.95);
+      border-radius: 2rem;
+      box-shadow: 0 8px 32px rgba(232, 72, 127, 0.16), 0 2px 8px #fbbf24;
+      border: 4px solid #f472b6;
+      max-width: 380px;
+      width: 90vw;
+      padding: 2.5rem 2rem;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: auto;
+      /* Centering for all cases */
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+  <!-- Confetti -->
+  <div class="confetti"></div>
+  <script>
+    const colors = ["#FBBF24", "#F472B6", "#60A5FA", "#6EE7B7", "#F87171", "#FDE68A"];
+    for(let i=0;i<55;i++){
+      const dot = document.createElement('span');
+      dot.className = "confetti-dot";
+      dot.style.top = (Math.random()*95) + "%";
+      dot.style.left = (Math.random()*98) + "%";
+      dot.style.background = colors[i % colors.length];
+      document.querySelector('.confetti').appendChild(dot);
+    }
+  </script>
+  <!-- Birthday Card Container -->
+  <div class="card">
+    <div style="font-size:3rem;margin-bottom:1.2rem;">🎂</div>
+    <h1 style="font-weight:800;color:#d94687;font-size:2rem;margin-bottom:0.7rem;line-height:1.2;">
+      Happy Birthday, Langga Ririii!
+    </h1>
+    <p style="color:#444; margin-bottom:1rem; font-size:1.08rem;">
+      Hii, Lovee. I would like to greet you a happy birthday and to wish you the best of everything.
+      Sorry I'm not speak straighting, but I'm just adjusting. Nah uy, di mn ko kabalo mag sweet sweet hehe.
+      Rio Caryle, gusto lang ko makabalo ka na I am already decided to pursue you as my girlfriend and I am very true to this. I may not have much to offer pero I will give you everything
+      I have. This is not just a birthday greeting, but also a confession. Pero secret ra ang akong iconfess para di ka makabalo<br><br>
+      Happy 21st Birthday, Loveyyy.<br>I love You! 💖<br><br>
+      -Lovelove, LG
+    </p>
+    <div style="margin-top:1.2rem;">
+      <span style="
+        display: inline-block;
+        padding: 0.6rem 1.3rem;
+        background: #fbbf24bb;
+        color: #c51e5a;
+        border-radius: 9999px;
+        font-weight: 600;
+        font-size: 1rem;
+        box-shadow: 0 1px 8px #fbbf24;
+        ">
+        11/20/2025
+      </span>
+    </div>
+  </div>
+</body>
+</html>
